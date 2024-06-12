@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>金魚 GDF</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap');
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -19,11 +21,11 @@
         .container {
             text-align: center;
             background: rgba(255, 255, 255, 0.7); /* 降低透明度 */
-            padding: 40px 20px;
+            padding: 20px; /* 調整內邊距 */
             border-radius: 15px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
+            max-width: 300px; /* 調整最大寬度 */
+            width: 80%; /* 調整寬度 */
             backdrop-filter: blur(10px);
             animation: fadeIn 1s ease-in-out;
         }
@@ -40,29 +42,31 @@
         }
 
         h1 {
-            margin-bottom: 30px;
-            font-size: 2em;
+            margin-bottom: 20px; /* 調整標題下邊距 */
+            font-size: 1.5em; /* 調整字體大小 */
             color: #333;
         }
 
         .link {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between; /* 使內容兩端對齊 */
             margin: 10px 0;
-            padding: 15px 25px;
+            padding: 10px 15px; /* 調整內邊距 */
+            height: 60px; /* 統一按鈕高度 */
             color: #333;
             text-decoration: none;
             border-radius: 10px;
             transition: background-color 0.3s ease, transform 0.3s ease;
-            font-size: 1em;
-            font-weight: bold;
+            font-size: 1.2em; /* 調整字體大小 */
+            font-weight: bold; /* 字體加粗 */
+            background-color: #f0f0f0; /* 基本按鈕背景顏色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加陰影 */
         }
 
         .link img {
-            margin-right: 10px;
-            width: 24px; /* 確保圖標大小一致 */
-            height: 24px; /* 確保圖標大小一致 */
+            width: 30px; /* 統一logo大小 */
+            height: 30px; /* 統一logo大小 */
             vertical-align: middle;
         }
 
@@ -75,6 +79,11 @@
             transform: translateY(-2px);
         }
 
+        .link-streetvoice img {
+            width: 35px; /* 放大1號 */
+            height: 35px; /* 放大1號 */
+        }
+
         .link-streetvoice {
             background-color: #ffe0e0; /* 淺橙色 */
         }
@@ -83,16 +92,37 @@
             background-color: #ffd0d0; /* 當懸停時變深的橙色 */
             transform: translateY(-2px);
         }
+
+        .link-youtube img {
+            width: 50px; /* 再放大2號 */
+            height: 50px; /* 再放大2號 */
+            margin-left: -10px; /* 向左移動一點點 */
+        }
+
+        .link-youtube {
+            background-color: #ffcccc; /* 淺紅色 */
+        }
+
+        .link-youtube:hover {
+            background-color: #ff9999; /* 當懸停時變深的紅色 */
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>金魚 GDF</h1>
         <a href="https://open.spotify.com/artist/3VaCdPdW2XoyoBJ84HBXJI?si=S_4otyskRn6oITL9aRfEJw" class="link link-spotify">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Logo">Spotify
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Logo">
+            <span>Spotify</span>
         </a>
         <a href="https://streetvoice.com/GDFGOCRAZY/" class="link link-streetvoice">
-            <img src="https://img.shoplineapp.com/media/image_clips/657c02a976320127a3c18b7b/original.png?1702625960" alt="街聲 Logo">街聲
+            <img src="https://img.shoplineapp.com/media/image_clips/657c02a976320127a3c18b7b/original.png?1702625960" alt="街聲 Logo">
+            <span>街聲</span>
+        </a>
+        <a href="https://www.youtube.com/@7SQM" class="link link-youtube">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/018/930/575/small/youtube-logo-youtube-icon-transparent-free-png.png" alt="YouTube Logo">
+            <span>YouTube</span>
         </a>
     </div>
 </body>
